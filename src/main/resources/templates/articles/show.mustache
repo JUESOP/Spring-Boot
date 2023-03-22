@@ -1,0 +1,23 @@
+{{>layouts/header}}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+    </tr>
+    </thead>
+    <tbody class="table-group-divider">
+    {{#article}}
+    <tr>
+        <th scope="row">{{id}}</th>
+        <td>{{title}}</td>
+        <td>{{content}}</td>
+    </tr>
+    {{/article}}
+    </tbody>
+</table>
+<a href="/articles/{{article.id}}/edit" class="btn btn-primary">편집</a>
+<a href="/articles/{{article.id}}/delete" class="btn btn-danger">삭제</a>
+<a href="/articles" class="btn btn-primary">목록</a>
+{{>layouts/footer}}
