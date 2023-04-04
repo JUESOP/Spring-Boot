@@ -37,42 +37,18 @@ public class ArticleApiController {
         return (created != null) ? ResponseEntity.status(HttpStatus.OK).body(created) : ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
     }
 
-//    //PATCH
-//    @PatchMapping("/api/articles/{id}")
-//    public ResponseEntity<Article> update(@PathVariable Long id,
-//                                          @RequestBody ArticleForm dto) {
-//        // 1.수정용 엔티티 생성
-//        Article article = dto.toEntity();
-//
-//        // 2. 대상 엔티티를 조회
-//        Article target = articleRepository.findById(id).orElse(null);
-//
-//        // 3. 잘못된 요청 처리(대상이 없거나, id가 다른 경우)
-//        if (target == null || id != article.getId()) {
-//            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
-//        }
-//
-//        // 4. 업데이트 및 정상 응답(200)
-//        target.patch(article);
-//        Article updated = articleRepository.save(target);
-//        return ResponseEntity.status(HttpStatus.OK).body(updated);
-//    }
-//
-//    //DELETE
-//    @DeleteMapping("/api/articles/{id}")
-//    public ResponseEntity<Article> delete(@PathVariable Long id) {
-//
-//        //대상 찾기
-//        Article target = articleRepository.findById(id).orElse(null);
-//
-//        //잘못된 요청 처리
-//        if (target == null) {
-//            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
-//        }
-//
-//        //대상 삭제
-//        articleRepository.delete(target);
-//        return ResponseEntity.status(HttpStatus.OK).build();
-//    }
+    //PATCH
+    @PatchMapping("/api/articles/{id}")
+    public ResponseEntity<Article> update(@PathVariable Long id,
+                                          @RequestBody ArticleForm dto) {
+        Article updated = articleService.update(id, dto);
+        return (updated != null) ? ResponseEntity.status(HttpStatus.OK).body(updated) : ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+    }
 
+    //DELETE
+    @DeleteMapping("/api/articles/{id}")
+    public ResponseEntity<Article> delete(@PathVariable Long id) {
+        Article deleted = articleService.delete(id);
+        return (deleted != null) ? ResponseEntity.status(HttpStatus.OK).body(deleted) : ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+    }
 }
