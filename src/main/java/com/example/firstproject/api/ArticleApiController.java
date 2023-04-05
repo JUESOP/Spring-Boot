@@ -2,10 +2,7 @@ package com.example.firstproject.api;
 
 import com.example.firstproject.dto.ArticleForm;
 import com.example.firstproject.entity.Article;
-import com.example.firstproject.repository.ArticleRepository;
 import com.example.firstproject.service.ArticleService;
-import com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer;
-import org.aspectj.weaver.patterns.HasMemberTypePatternForPerThisMatching;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

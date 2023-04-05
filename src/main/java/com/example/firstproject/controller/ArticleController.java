@@ -83,7 +83,6 @@ public class ArticleController {
             articleRepository.save(articleEntity);
         }
         //수정 결과 페이지로 리다이렉트
-
         return "redirect:/articles/" + articleEntity.getId();
     }
 
