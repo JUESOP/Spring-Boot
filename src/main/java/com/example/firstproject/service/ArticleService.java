@@ -46,8 +46,7 @@ public class ArticleService {
 
         //업데이트 및 정상 응답
         target.patch(article);
-        Article updated = articleRepository.save(target);
-        return updated;
+        return articleRepository.save(target);
     }
 
     public Article delete(Long id) {

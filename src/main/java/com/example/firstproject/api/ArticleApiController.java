@@ -16,25 +16,26 @@ public class ArticleApiController {
     @Autowired //DI, 생성 객체를 가져와 연결!
     private ArticleService articleService;
 
-    //GET
+    //GET 전체 조회
     @GetMapping("/api/articles")
     public List<Article> index() {
         return articleService.index();
     }
 
+    //상세 조회
     @GetMapping("/api/articles/{id}")
     public Article show(@PathVariable Long id) {
         return articleService.show(id);
     }
 
-    //POST
+    //POST 생성
     @PostMapping("/api/articles")
     public ResponseEntity<Article> create(@RequestBody ArticleForm dto) {
         Article created = articleService.create(dto);
         return (created != null) ? ResponseEntity.status(HttpStatus.OK).body(created) : ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
     }
 
-    //PATCH
+    //PATCH 수정
     @PatchMapping("/api/articles/{id}")
     public ResponseEntity<Article> update(@PathVariable Long id,
                                           @RequestBody ArticleForm dto) {
