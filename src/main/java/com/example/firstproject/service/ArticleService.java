@@ -3,6 +3,7 @@ package com.example.firstproject.service;
 import com.example.firstproject.dto.ArticleForm;
 import com.example.firstproject.entity.Article;
 import com.example.firstproject.repository.ArticleRepository;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +22,7 @@ public class ArticleService {
         return articleRepository.findById(id).orElse(null);
     }
 
-    public Article create(ArticleForm dto) {
+    public Article create(@NotNull ArticleForm dto) {
         //엔티티 생성
         Article article = dto.toEntity();
         //존재하는 아이디면,
