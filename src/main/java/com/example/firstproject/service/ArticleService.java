@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service //서비스 선언! (서비스 객체를 스프링부트에 생성)
 public class ArticleService {
-    @Autowired //DI
+    @Autowired //DI, 스프링이 관리하는 빈을 주입 받는다, 필드 주입
     private ArticleRepository articleRepository;
 
     public List<Article> index() {

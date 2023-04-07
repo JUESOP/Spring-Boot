@@ -1,5 +1,5 @@
 INSERT INTO article(id, title, content)
-VALUES(1, '가가가가', '11111');
+VALUES(1, '가가가가', '1111');
 
 INSERT INTO article(id, title, content)
 VALUES(2, '나나나나', '2222');
