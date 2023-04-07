@@ -66,6 +66,7 @@ class ArticleServiceTest {
 
         //실제
         Article article = articleService.create(dto);
+
         //비교
         assertEquals(expected, article);
     }
@@ -84,36 +85,36 @@ class ArticleServiceTest {
         assertEquals(expected, article);
     }
 
-    @Test
-    @Transactional
-    void update_성공___존재하는_id와_title_content가_있는_dto_입력() {
-        //예상
-        //실제
-        //비교
-    }
-
-    @Test
-    @Transactional
-    void update_성공___존재하는_id와_title만_있는_dto_입력() {
-    }
-
-    @Test
-    @Transactional
-    void update_실패___존재하지_않는_id의_dto_입력() {
-    }
-
-    @Test
-    @Transactional
-    void update_실패___id만_있는_dto_입력() {
-    }
-
-    @Test
-    @Transactional
-    void delete_성공___존재하는_id_입력() {
-    }
-
-    @Test
-    @Transactional
-    void delete_실패___존재하지_않는_id_입력() {
-    }
+//    @Test
+//    @Transactional
+//    void update_성공___존재하는_id와_title_content가_있는_dto_입력() {
+//        //예상
+//        //실제
+//        //비교
+//    }
+//
+//    @Test
+//    @Transactional
+//    void update_성공___존재하는_id와_title만_있는_dto_입력() {
+//    }
+//
+//    @Test
+//    @Transactional
+//    void update_실패___존재하지_않는_id의_dto_입력() {
+//    }
+//
+//    @Test
+//    @Transactional
+//    void update_실패___id만_있는_dto_입력() {
+//    }
+//
+//    @Test
+//    @Transactional
+//    void delete_성공___존재하는_id_입력() {
+//    }
+//
+//    @Test
+//    @Transactional
+//    void delete_실패___존재하지_않는_id_입력() {
+//    }
 }
