@@ -14,12 +14,12 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class Comment {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //자동생성
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //DB 자동생성
     private Long id;
 
     @ManyToOne //해당 댓글 엔티티 여러개가 하나의 Article에 연관된다
     @JoinColumn(name = "article_id") //"article_id" 컬럼에 Article의 대표값을 저장!
-    private Article article;
+    private Article article; //댓글의 부모 게시글
 
     @Column
     private String nickname;

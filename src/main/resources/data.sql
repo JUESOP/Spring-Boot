@@ -24,11 +24,11 @@ INSERT INTO comment(id, article_id, nickname, body) VALUES (2, 4, 'Park', '굳 �
 INSERT INTO comment(id, article_id, nickname, body) VALUES (3, 4, 'Park', '굳 윌22 헌팅');
 
 --5번 게시글의 댓글들
-INSERT INTO comment(id, article_id, nickname, body) VALUES (4, 5, 'Park', '굳 윌 33헌팅');
-INSERT INTO comment(id, article_id, nickname, body) VALUES (5, 5, 'Park', '굳 윌 44헌팅');
-INSERT INTO comment(id, article_id, nickname, body) VALUES (6, 5, 'Park', '굳 윌55 헌팅');
+INSERT INTO comment(id, article_id, nickname, body) VALUES (4, 5, 'Lee', '굳 윌 33헌팅');
+INSERT INTO comment(id, article_id, nickname, body) VALUES (5, 5, 'Lee', '굳 윌 44헌팅');
+INSERT INTO comment(id, article_id, nickname, body) VALUES (6, 5, 'Lee', '굳 윌55 헌팅');
 
 --6번 게시글의 댓글들
-INSERT INTO comment(id, article_id, nickname, body) VALUES (7, 6, 'Park', '굳 윌 66헌팅');
-INSERT INTO comment(id, article_id, nickname, body) VALUES (8, 6, 'Park', '굳 윌 77헌팅');
-INSERT INTO comment(id, article_id, nickname, body) VALUES (9, 6, 'Park', '굳 윌88 헌팅');
+INSERT INTO comment(id, article_id, nickname, body) VALUES (7, 6, 'Kim', '굳 윌 66헌팅');
+INSERT INTO comment(id, article_id, nickname, body) VALUES (8, 6, 'Kim', '굳 윌 77헌팅');
+INSERT INTO comment(id, article_id, nickname, body) VALUES (9, 6, 'Kim', '굳 윌88 헌팅');
