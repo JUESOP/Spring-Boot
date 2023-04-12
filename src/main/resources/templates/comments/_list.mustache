@@ -1,0 +1,12 @@
+<div id="comments-list" class="pt-5">
+    {{#commentDtos}}
+        <div class="card m-2" id="comments-{{id}}">
+            <div class="card-header bg-primary text-white">
+                {{nickname}}
+            </div>
+            <div class="card-body bg-light">
+                {{body}}
+            </div>
+        </div>
+    {{/commentDtos}}
+</div>

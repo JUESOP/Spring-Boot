@@ -13,8 +13,10 @@ import lombok.ToString;
 @ToString
 public class CommentDto {
     private Long id;
+
     @JsonProperty("article_id")
     private Long articleId; //댓글이 포함된 게시글의 id
+
     private String nickname;
     private String body;
 

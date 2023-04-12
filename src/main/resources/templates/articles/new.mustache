@@ -1,13 +1,16 @@
 {{>layouts/header}}
-
-<form action="/articles/create" method="post">
-   <p><input class="form-control" placeholder="title" type="text" name="title"></p>
-    <div class="form-floating">
-        <textarea class="form-control" name="content" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 50px"></textarea>
-        <label for="floatingTextarea2">Comments</label>
-    </div>
-    <button class="btn btn-primary" type="submit">제출</button>
-    <a href="/articles" class="btn btn-primary">뒤로</a>
-</form>
+<div class="pt-5">
+    <form action="/articles/create" method="post">
+       <p><input class="form-control" placeholder="title" type="text" name="title"></p>
+        <div class="form-floating">
+            <textarea class="form-control" name="content" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 50px"></textarea>
+            <label for="floatingTextarea2">Comments</label>
+        </div>
+        <div class="pt-5">
+            <button class="btn btn-primary" type="submit">제출</button>
+            <a href="/articles" class="btn btn-primary">뒤로</a>
+        </div>
+    </form>
+</div>
 
 {{>layouts/footer}}

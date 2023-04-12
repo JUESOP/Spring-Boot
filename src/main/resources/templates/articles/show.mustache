@@ -1,4 +1,5 @@
 {{>layouts/header}}
+<div class="pt-5">
 <table class="table">
     <thead>
     <tr>
@@ -17,7 +18,9 @@
     {{/article}}
     </tbody>
 </table>
-<a href="/articles/{{article.id}}/edit" class="btn btn-primary">편집</a>
+<a href="/articles/{{article.id}}/edit" class="btn btn-secondary">편집</a>
+<a href="/articles" class="btn btn-secondary">목록</a>
 <a href="/articles/{{article.id}}/delete" class="btn btn-danger">삭제</a>
-<a href="/articles" class="btn btn-primary">목록</a>
+</div>
+{{>comments/_comments}}
 {{>layouts/footer}}
