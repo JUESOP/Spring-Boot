@@ -13,11 +13,7 @@
 
                 <!-- 삭제 버튼 -->
                 <button type="button" class="btn btn-sm btn-outline-danger comment-delete-btn"
-                        data-bs-id="{{id}}"
-                        data-bs-nickname="{{nickname}}"
-                        data-bs-body="{{body}}"
-                        data-bs-article-id="{{articleId}}"
-                >삭제</button>
+                        data-comment-id="{{id}}">삭제</button>
             </div>
             <div class="card-body">
                 {{body}}
@@ -115,8 +111,22 @@
     //삭제 버튼 이벤트를 처리
     commentDeleteBtns.forEach(btn => {
       //각 버튼의 이벤트 처리를 등록
-      btn.addEventListener("click", () => {
-
+      btn.addEventListener("click", (e) => {
+        //삭제 댓글 id 가져오기
+          let commentId = e.target.getAttribute('data-comment-id');
+          //삭제 API 호출 및 처리
+          const url = `/api/comments/${commentId}`;
+          fetch(url, {
+            method: "DELETE"
+          }).then(response => {
+              if (!response.ok) {
+                alert("댓글 삭제 실패..!")
+                  return;
+              }
+              //삭제 성공 시, 댓글을 화면에서 지움!
+              const target = document.querySelector(`#comments-${commentId}`);
+              target.remove();
+          })
       })
     })
 }
