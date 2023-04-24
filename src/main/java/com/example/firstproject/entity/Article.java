@@ -13,7 +13,7 @@ import javax.persistence.*;
 public class Article {
 
     @Id //기본키 직접 할당
-    @GeneratedValue //JPA가 테이블의 기본키 값을 자동으로 생성
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //JPA가 테이블의 기본키 값을 자동으로 생성
     private Long id;
 
     @Column //객체 필드를 테이블의 컬럼에 매핑
