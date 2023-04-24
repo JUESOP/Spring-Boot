@@ -1,7 +1,6 @@
 package com.example.firstproject.aop;
 
 import lombok.extern.slf4j.Slf4j;
-import net.bytebuddy.implementation.bind.annotation.Pipe;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -38,6 +37,5 @@ public class PerformanceAspect {
         String methodName = joinPoint.getSignature()
                                      .getName();
         log.info("{}의 총 수행 시간 => {} sec", methodName, stopWatch.getTotalTimeSeconds());
-
     }
 }
