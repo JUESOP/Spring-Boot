@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 public class DebuggingAspect {
 
     //대상 메소드 선택: CommentService#create()
-    @Pointcut("execution(* com.example.firstproject.service.CommentService.*(..))")
+    @Pointcut("execution(* com.example.firstproject.service.CommentService.*(..))") //찔러 넣어주겠다
     private void cut(){}
 
     //실행 시점 설정: cut()의 대상이 수행되기 이전
@@ -37,7 +37,7 @@ public class DebuggingAspect {
     }
 
     //cut()에 지정된 대상 호출 성공 후!
-    @AfterReturning(value = "cut()", returning = "returnObj")
+    @AfterReturning(value = "cut()", returning = "returnObj") //return 이름 지정해줘야 함
     public void loggingReturnValue(JoinPoint joinPoint,//cut()의 대상 메소드
                                    Object returnObj) { //리턴값
         //클래스명
